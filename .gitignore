@@ -1,0 +1,10 @@
+# node modules
+/node_modules
+
+# testing, coverage, reports
+/coverage
+
+# misc
+.DS_Store
+package-lock.json
+.vscode/
