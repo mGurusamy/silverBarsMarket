@@ -11,6 +11,7 @@
     "test:int": "mocha src/test/integration/index.js",
     "test:int:watch": "mocha src/test/integration/index.js --watch",
     "docker:build": "docker image build -t silverbarsmarket:1.0.0 .",
+    "docker:build:git": "docker image build -t silverbarsmarket:1.0.0 git@github.com:mGurusamy/silverBarsMarket.git",
     "docker:run": "docker container run -d --name silverBarsMarketApi -p 8000:8000 silverbarsmarket:1.0.0"
   },
   "keywords": [],
