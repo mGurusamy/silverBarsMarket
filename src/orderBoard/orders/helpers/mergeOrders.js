@@ -1,5 +1,5 @@
 const mergeOrders = (orders) => {
-  const updatedOrders = Array.from(orders);
+  const updatedOrders = [...orders];
 
   updatedOrders.map((element, index, array) => {
     for (let counter = ++index; counter < array.length; counter++) {
@@ -12,6 +12,8 @@ const mergeOrders = (orders) => {
       }
     }
   });
+  console.log('orders array:', orders);
+  console.log('updated orders array:', updatedOrders);
   return updatedOrders;
 };
 
