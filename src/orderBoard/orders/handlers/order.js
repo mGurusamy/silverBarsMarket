@@ -15,6 +15,7 @@ const orderBoard = [];
 router.post('/', (req, res) => {
   const body = req;
   const order = new Order(req.body.id, req.body.quantity, req.body.price, req.body.type);
+  console.log('Received Order is:', order);
   try {
     if(validator(order)){
       orderBoard.push(order);
@@ -36,6 +37,9 @@ router.get('/', (req, res) => {
 
 // delete an order from orderBoard
 router.delete('/', (req, res) => {
+  res.set('Content-Type', 'application/json');
+  console.log('URL params received:', req.params);
+  console.log('Request itself:',req.query);
   const requestId = req.body.id;
   if(requestId){
     const deleteOrder = reqOrder(requestId);
